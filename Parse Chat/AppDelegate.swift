@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -16,6 +17,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        Parse.initialize(
+            with: ParseClientConfiguration(block: { (configuration: ParseMutableClientConfiguration) -> Void in
+                configuration.applicationId = "Parsechat"
+                configuration.clientKey = "helloworldtocs490"  // set to nil assuming you have not set clientKey
+                configuration.server = "https://sheltered-fortress-96790.herokuapp.com/parse"
+            })
+        )
+        
+//        if let currentUser = PFUser.current() {
+//            print("Welcome back \(currentUser.username!) 😀")
+//                
+//            let storyboard = UIStoryboard(name: "Main", bundle: nil)
+//            let chatViewController = storyboard.instantiateViewController(withIdentifier: "ChatViewController")
+//            window?.rootViewController = chatViewController
+//        }
+//        
+//        
+        
         return true
     }
 

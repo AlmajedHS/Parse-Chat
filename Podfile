@@ -7,7 +7,9 @@ target 'Parse Chat' do
 
   # Pods for Parse Chat
 	pod 'Parse'
-  target 'Parse ChatTests' do
+	
+  
+target 'Parse ChatTests' do
     inherit! :search_paths
     # Pods for testing
   end
