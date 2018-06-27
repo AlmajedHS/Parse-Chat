@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBOutlet weak var userNameField: UITextField!
     @IBOutlet weak var passwordField: UITextField!
-    
+    //hi
     @IBAction func signupButton(_ sender: UIButton) {
         if(userNameField.text?.isEmpty)!{
             errorHandling(typeOfError: "user name field, empty")
